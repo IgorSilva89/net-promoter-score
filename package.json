@@ -10,7 +10,7 @@
   "author": "IgorSilva89 <igor_ea@yahoo.com.br>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.ts"
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
