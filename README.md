@@ -14,13 +14,13 @@ O Yarn é um gerenciador de pacotes para aplicar comandos prontos ao código de 
 * yarn add @types/express -D  
 
 # Install Typescript
-1. TypeScript é um super conjunto da linguagem JavaScript que fornece classes, interfaces e tipagem estática opcional. ... O TypeScript é open source e pode ser usado para desenvolver aplicações JavaScript do lado do cliente ou do lado do servidor (Node. js).
+TypeScript é um super conjunto da linguagem JavaScript que fornece classes, interfaces e tipagem estática opcional. ... O TypeScript é open source e pode ser usado para desenvolver aplicações JavaScript do lado do cliente ou do lado do servidor (Node. js).
 * yarn add typescript -D**  
 
-2. Iniciar o typescript dentro da nossa aplicação 
+### Iniciar o typescript dentro da nossa aplicação 
 * yarn tsc --init  
 
-3. Converter código em tempo real para rodar no servidor
+### Converter código em tempo real para rodar no servidor
 * yarn add ts-node-dev -D  
   
 # Rodar o projeto
