@@ -9,6 +9,9 @@
   "repository": "https://github.com/IgorSilva89/net-promoter-score.git",
   "author": "IgorSilva89 <igor_ea@yahoo.com.br>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
   "devDependencies": {
     "@types/express": "^4.17.11",
     "ts-node-dev": "^1.1.1",
