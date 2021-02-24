@@ -1,3 +1,9 @@
+/**
+ * Responsável por criar a entidade no banco
+ * criar a tabela: yarn typeorm migration:run
+ * dropar a tabela: 
+ */
+
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateUser1614108005505 implements MigrationInterface {

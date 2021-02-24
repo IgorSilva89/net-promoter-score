@@ -1,5 +1,5 @@
 /**
- * Classe responsável por criar a entidade
+ * Model com os atributos da entidade users
  */
 
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
