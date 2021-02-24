@@ -10,6 +10,7 @@ const surveysController = new SurveysController();
 router.post("/users", userController.create);
 
 router.post("/pesquisas", surveysController.create);
+router.get("/pesquisas", surveysController.selectAll);
 
 // router.get("/users", userController.selectAll);
 
