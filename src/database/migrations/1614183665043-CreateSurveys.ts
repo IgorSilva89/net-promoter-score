@@ -1,7 +1,7 @@
 /**
  * Responsável por criar a entidade no banco
  * criar a tabela: yarn typeorm migration:run
- * dropar a tabela: 
+ * dropar a tabela: yarn typeorm migration:revert
  */
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
