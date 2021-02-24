@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import { getRepository } from 'typeorm';
+import { getCustomRepository, getRepository } from 'typeorm';
 import { User } from '../models/User';
+import { UserRepository } from '../repositories/UserRepository';
 
 class UserController {
 
@@ -10,7 +11,7 @@ class UserController {
     async create(request: Request, response: Response) {
         const body = request.body;
 
-        const usersRepository = getRepository(User);
+        const usersRepository = getCustomRepository(UserRepository);
 
         /**
          * findOne é como se fosse um select * from where email = "email". Retornará sempre 1
@@ -34,54 +35,54 @@ class UserController {
         return response.json(user);
     }
 
-    /**
-     * Deleta um usuário de acordo com o id informado
-     */
-    async delete(request: Request, response: Response) {
-        const body = request.body;
+    // /**
+    //  * Deleta um usuário de acordo com o id informado
+    //  */
+    // async delete(request: Request, response: Response) {
+    //     const body = request.body;
 
-        const usersRepository = getRepository(User);
+    //     const usersRepository = getRepository(User);
 
-        const usuario = await usersRepository.findOne({ id: body.id });
-        if (!usuario) {
-            response.status(400).json({
-                message: "Usuário não encontrado na base de dados"
-            })
-        }
+    //     const usuario = await usersRepository.findOne({ id: body.id });
+    //     if (!usuario) {
+    //         response.status(400).json({
+    //             message: "Usuário não encontrado na base de dados"
+    //         })
+    //     }
 
-        const user = usersRepository.create({
-            id: body.id,
-        })
+    //     const user = usersRepository.create({
+    //         id: body.id,
+    //     })
 
-        await usersRepository.delete(user)
-        return response.json(user);
-    }
+    //     await usersRepository.delete(user)
+    //     return response.json(user);
+    // }
 
-    /**
-     * Busca todos os registros que existirem na tabela
-     */
-    async selectAll(request: Request, response: Response) {
+    // /**
+    //  * Busca todos os registros que existirem na tabela
+    //  */
+    // async selectAll(request: Request, response: Response) {
 
-        const usersRepository = getRepository(User);
+    //     const usersRepository = getRepository(User);
 
-        const usuarios = await usersRepository.find();
+    //     const usuarios = await usersRepository.find();
 
-        return response.send(usuarios);
-    }
+    //     return response.send(usuarios);
+    // }
 
-    /**
-     * Busca um registro de acordo com o id informado na rota
-     */
-    async selectOne(request: Request, response: Response) {
+    // /**
+    //  * Busca um registro de acordo com o id informado na rota
+    //  */
+    // async selectOne(request: Request, response: Response) {
 
-        const usersRepository = getRepository(User);
+    //     const usersRepository = getRepository(User);
 
-        const headers = request.headers.id;
+    //     const headers = request.headers.id;
 
-        const getOne = await usersRepository.findOne(headers?.toString());
+    //     const getOne = await usersRepository.findOne(headers?.toString());
 
-        return response.send(getOne);
-    }
+    //     return response.send(getOne);
+    // }
 }
 
 export { UserController }

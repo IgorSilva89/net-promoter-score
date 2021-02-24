@@ -1,9 +1,10 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import {v4 as uuid } from "uuid";
-
 /**
  * Classe responsável por criar a entidade
  */
+
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
+import {v4 as uuid } from "uuid";
+
 @Entity("users")
 class User {
 
@@ -31,6 +32,6 @@ class User {
 
 export { User }
 
-//posso passar assim também
+//posso passar assim também. Passando entre string o nome correto da coluna
     // @Column("name")
     // nameBatata: string;

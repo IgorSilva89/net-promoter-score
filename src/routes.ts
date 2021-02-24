@@ -7,10 +7,10 @@ const userController = new UserController();
 
 router.post("/users", userController.create);
 
-router.delete("/users", userController.delete);
+// router.delete("/users", userController.delete);
 
-router.get("/users", userController.selectAll);
+// router.get("/users", userController.selectAll);
 
-router.get("/users/id", userController.selectOne);
+// router.get("/users/id", userController.selectOne);
 
 export { router }
